@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sign In</title>
+    <script src="https://rawgit.com/aws/amazon-cognito-identity-js/master/dist/aws-cognito-sdk.min.js"></script>
+    <script src="https://rawgit.com/aws/amazon-cognito-identity-js/master/dist/amazon-cognito-identity.min.js"></script>
+    <script>
+        var cognito = require('amazon-cognito-identity-js')
+        var CognitoUserPool = cognito.CognitoUserPool;
+        var poolData = {
+            UserPoolId : 'us-east-2_XF6kGbMOv', // Your user pool id
+            ClientId : 'vckbmv88fv1r8g9nod9kep932' // Your app client id
+        };
+        var userPool = new CognitoUserPool(poolData);
+        document.addEventListener('DOMContentLoaded', function() {
+            var authenticationDetails = new cognito.CognitoIdentityServiceProvider.AuthenticationDetails({
+                Username : 'testuser',
+                Password : 'P@55w0rd'
+            });
+            var cognitoUser = new cognito.CognitoIdentityServiceProvider.CognitoUser({
+                Username : 'testuser',
+                Pool : userPool
+            });
+            cognitoUser.authenticateUser(authenticationDetails, {
+                onSuccess: function (result) {
+                    console.log(result);
+                },
+                onFailure: function(err) {
+                    console.log(err);
+                }
+            });
+        });
+    </script>
+</head>
+
+<body>
+    
+    <h1>Sign In</h1>
+    
+</body>
+</html>
