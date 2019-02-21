@@ -22,6 +22,7 @@
 import * as AWS from 'aws-sdk/global';
 import { CognitoUserPool, CognitoUserAttribute, CognitoUser } from 'amazon-cognito-identity-js';
     
+    //This should register the user with the application
     var poolData = {
         UserPoolId : 'us-east-2_XF6kGbMOv', // Your user pool id here
         ClientId : '7baqk0j6u9iqthi0eucad848t6' // Your client id here
@@ -35,15 +36,9 @@ import { CognitoUserPool, CognitoUserAttribute, CognitoUser } from 'amazon-cogni
         Value : 'email@mydomain.com'
     };
 
-    var dataPhoneNumber = {
-        Name : 'phone_number',
-        Value : '+15555555555'
-    };
     var attributeEmail = new CognitoUserAttribute(dataEmail);
-    var attributePhoneNumber = new CognitoUserAttribute(dataPhoneNumber);
 
     attributeList.push(attributeEmail);
-    attributeList.push(attributePhoneNumber);
 
     userPool.signUp('username', 'password', attributeList, null, function(err, result){
         if (err) {
