@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta name="google-signin-client_id" content="282015498349-nh45f57uv623f6vp08tr4hqbek8usgfp.apps.googleusercontent.com.apps.googleusercontent.com">
-    <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase.js"></script>
+    <meta name="google-signin-client_id" content="282015498349-num3ocfs7m203cpjru11t5m0maeib4hf.apps.googleusercontent.com">
     
     <script src="https://apis.google.com/js/platform.js" async defer>
 
@@ -22,15 +21,7 @@
     <title>DataFall</title>
     
 
-    <!-- update the version number as needed -->
-    <script defer src="/__/firebase/5.8.4/firebase-app.js"></script>
-    <!-- include only the Firebase features as you need -->
-    <script defer src="/__/firebase/5.8.4/firebase-auth.js"></script>
-    <script defer src="/__/firebase/5.8.4/firebase-database.js"></script>
-    <script defer src="/__/firebase/5.8.4/firebase-messaging.js"></script>
-    <script defer src="/__/firebase/5.8.4/firebase-storage.js"></script>
-    <!-- initialize the SDK after all desired features are loaded -->
-    <script defer src="/__/firebase/init.js"></script>
+    
 
     <style media="screen">
       body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
@@ -54,15 +45,6 @@
       <p>Just sign in with Google to get started.</p>
       
       <div>
-      <script>
-    function onSignIn(googleUser) {
-        var profile = googleUser.getBasicProfile();
-        console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
-        console.log('Name: ' + profile.getName());
-        console.log('Image URL: ' + profile.getImageUrl());
-        console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
-        }
-    </script>
        <div class="g-signin2" data-onsuccess="onSignIn"></div>
     </div>
       
