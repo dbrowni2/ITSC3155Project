@@ -25,8 +25,44 @@ h2 {
   color: blue;
 }
 
+/*div2 is for the nav bar*/
+#div2 ul
+{
+    float : left;
+    position: relative;
+}
+#div2 ul li
+{
+    list-style-type: none;
+    display : inline-block;
+}
+#div2 ul li a
+{
+    text-decoration: none;
+    padding : 30px;
+    color : #2F4F4F;
+    left :0px;
+}
+#div2 ul li:hover
+{
+    background : #D3D3D3;
+}
+#div2 ul li li
+{
+    background : #D3D3D3;
+    display: block;
+}
 
-
+#div2
+{
+    background : #DCDCDC;
+    height : 100px;
+    width : 100%;
+    text-align : 50px;
+    line-height: 75px;
+    opacity : 0.7;
+    filter : alpha(opacity = 70);
+}
 body
 {
   background: #33DCE0;
