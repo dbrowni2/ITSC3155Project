@@ -6,4 +6,8 @@ class WelcomeController < ApplicationController
   end 
   def contact
   end
+  def rewards
+  end
+  def submit
+  end
 end
