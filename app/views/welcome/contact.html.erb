@@ -1,2 +1,11 @@
 <h1>Contact us</h1>
+<input type = "text" name = "name" value = "" size = "50" placeholder = "Name....">
+<input type = "text" name = "email" value = "" size = "50" placeholder = "Email....">
+<input type = "text" name = "subject" value = "" size = "50" placeholder = "Subject....">
+<h1>Message</h1>
+<br><br>
+<form action='contact.html.erb' class = "forum" method="post" enctype="multipart/form-data">
+        <textarea name="messagebody" rows="4" cols="60" class = "text"></textarea>
+        <input type="submit" name="post" value="Post">
+</form>
 <%= render 'sitenav' %> 
