@@ -1,11 +1,11 @@
 <%= form_for :submission, url: submissions_path do |f| %>
 <p>
-    <%= f.check_box :Preference %>
+    <%= f.radio_button :Preference %>
      <%= f.label :Preference %><br>
-    <%= f.check_box :Location %>
+    <%= f.radio_button :Location %>
      <%= f.label :Location%><br>
-    <%= f.check_box :Purchases %><br>
-     <%= f.label :Purchases %>
+    <%= f.radio_button :Purchases %>
+     <%= f.label :Purchases %><br>
   </p>
  
   <p>
