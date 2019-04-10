@@ -1,0 +1,19 @@
+<h1>Listing submisions</h1>
+ <%= link_to 'New Submission', new_submission_path %>
+
+<table>
+  <tr>
+    <th>Category</th>
+    <th>Description</th>
+  </tr>
+ 
+  <% @submissions.each do |submission| %>
+    <tr>
+      <td><%= submission.category %></td>
+      <td><%= submission.description %></td>
+      <td><%= link_to 'Show', submission_path(submission) %></td>
+     
+    </tr>
+  <% end %>
+</table>
+
