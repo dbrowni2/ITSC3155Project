@@ -1,16 +1,11 @@
-<%= form_for :submission, url: submissions_path do |f| %>
+<%= form_for([@user, @user.submissions.build]) do |f| %>
 <p>
-    <%= f.check_box :Preference %>
-     <%= f.label :Preference %><br>
-    <%= f.check_box :Location %>
-     <%= f.label :Location%><br>
-    <%= f.check_box :Purchases %>
-     <%= f.label :Purchases %><br>
+   <%= f.select :category, ['Preference', 'Location','Purchase']%>
   </p>
  
   <p>
-    <%= f.label :Description %><br>
-    <%= f.text_area :Description %>
+    <%= f.label :description %><br>
+    <%= f.text_area :description %>
   </p>
  
   <p>
