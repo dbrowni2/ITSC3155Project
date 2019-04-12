@@ -1,6 +1,6 @@
 class SubmissionsController < ApplicationController
 def index
-  @submissions = Submission.all
+  @submissions = Submission.where(:user_id => session[:user_id])
 end 
 def new
  @user = User.find_by_id(session[:user_id])
