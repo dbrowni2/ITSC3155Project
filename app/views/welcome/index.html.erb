@@ -6,17 +6,17 @@
 <title>DataFall Inc.</title>
 <%= stylesheet_link_tag "application.css" %>
 <%= javascript_include_tag "application.js" %>
-<script
-  src="https://code.jquery.com/jquery-2.2.4.min.js"
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"
   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
   crossorigin="anonymous"></script>
+
 </head>
 
 <body>
 
 <header>
 		<%= image_tag("logo.png", class: "logo") %>
- 
+		<%= render 'sitenav' %>
 </header>
 
 <section class="home-hero parallax--bg">
@@ -111,7 +111,7 @@
 <footer>
 	<div class="container">
 		<div class="col-3">
-			<p>Requires Facebook Login</p>
+			<p>Requires Google Login</p>
 		</div>
 
 		<div class="col-1">

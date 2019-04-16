@@ -1,5 +1,34 @@
-<h1>About us</h1>
-<%= render 'sitenav' %> 
+
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DataFall Inc.</title>
+<%= stylesheet_link_tag "application.css" %>
+<%= javascript_include_tag "application.js" %>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"
+  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+  crossorigin="anonymous"></script>
+
+</head>
+<header>
+		<%= image_tag("logo.png", class: "logo") %>
+<%= render 'welcome/sitenav' %>
+</header>
+<body>
+  <section class="home-hero parallax--bg">
+	<div class="container">
+		<h1 class="title parallax--box"><span>About Us</span>
+		</h1>
+
 <p>Welcome To DataFall! Where you can earn currency for your submitted data!<br> Users sign up for various platforms like Facebook, and twitter.<br> The service is free, however their data is used as compensation <br> without (for the most part of the general population) any knowledge from the user. <br> The team believes user’s should earn a cut from relinquishing that information to use<br> these “free” services.
 The solution? Create a platform that <br> puts the user in control of their own data, empowering the user to provide <br> and sell as much data as they want with full transparency.</p>
 
+
+<%= link_to 'Back', root_path, id: "back" %>
+	</div>
+</section>
+
+</body>
+</html>

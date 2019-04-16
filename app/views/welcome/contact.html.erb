@@ -1,12 +1,41 @@
-<h1>Contact us</h1>
-<%= render 'sitenav' %> 
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DataFall Inc.</title>
+<%= stylesheet_link_tag "application.css" %>
+<%= javascript_include_tag "application.js" %>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"
+  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+  crossorigin="anonymous"></script>
+
+</head>
+<header>
+		<%= image_tag("logo.png", class: "logo") %>
+<%= render 'welcome/sitenav' %>
+</header>
+<body>
+  <section class="home-hero parallax--bg">
+	<div class="container">
+		<h1 class="title parallax--box"><span>Contact Us</span>
+		</h1>
+
 <input type = "text" name = "name" value = "" size = "50" placeholder = "Name....">
 <input type = "text" name = "email" value = "" size = "50" placeholder = "Email....">
 <input type = "text" name = "subject" value = "" size = "50" placeholder = "Subject....">
 <h1>Message</h1>
 <br><br>
-<form action='contact.html.erb' class = "forum" method="post" enctype="multipart/form-data">
+<form action='contact.html.erb' class = "form" method="post" enctype="multipart/form-data">
         <textarea name="messagebody" rows="4" cols="60" class = "text"></textarea>
-        <input type="submit" name="post" value="Post">
+        <input id="post" type="submit" name="post" value="Post">
 </form>
 
+
+
+<%= link_to 'Back', root_path, id: "back" %>
+	</div>
+</section>
+
+</body>
+</html>

@@ -1,6 +1,27 @@
-<h1>Listing submisions</h1>
- 
-<table>
+
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DataFall Inc.</title>
+<%= stylesheet_link_tag "application.css" %>
+<%= javascript_include_tag "application.js" %>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"
+  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+  crossorigin="anonymous"></script>
+
+</head>
+<header>
+		<%= image_tag("logo.png", class: "logo") %>
+<%= render 'welcome/sitenav' %>
+</header>
+<body>
+  <section class="home-hero parallax--bg">
+	<div class="container">
+		<h1 class="title parallax--box"><span>Listing submisions</span>
+		</h1>
+		<table>
   <tr>
     <th>Category</th>
     <th>Description</th>
@@ -15,5 +36,10 @@
     </tr>
   <% end %>
 </table>
-<%= link_to 'Back', root_path %>
 
+<%= link_to 'Back', root_path, id: "back" %>
+	</div>
+</section>
+
+</body>
+</html>
