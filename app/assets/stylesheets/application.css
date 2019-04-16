@@ -1,55 +1,4 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway:300,400,700,900');
-@import url(//fonts.googleapis.com/css?family=Exo:100,200,400);
-@import url(//fonts.googleapis.com/css?family=Source+Sans+Pro:700,400,300);
-h1 {
-  font-size: 32px;
-  color: blue;
-}
-
-h2 {
-  font-size: 24px;
-  color: blue;
-}
-
-/*div2 is for the nav bar*/
-#div2 ul
-{
-    float : left;
-    position: relative;
-}
-#div2 ul li
-{
-    list-style-type: none;
-    display : inline-block;
-}
-#div2 ul li a
-{
-    text-decoration: none;
-    padding : 30px;
-    color : #2F4F4F;
-    left :0px;
-}
-#div2 ul li:hover
-{
-    background : #D3D3D3;
-}
-#div2 ul li li
-{
-    background : #D3D3D3;
-    display: block;
-}
-
-#div2
-{
-    background : #DCDCDC;
-    height : 100px;
-    width : 100%;
-    text-align : 50px;
-    line-height: 75px;
-    opacity : 0.7;
-    filter : alpha(opacity = 70);
-    display: block;
-}
 
 * {
 	box-sizing: border-box;
@@ -247,14 +196,16 @@ header {
 	margin: 1em;
 }
 
-nav {
+nav ul {
 	margin: 0;
 	padding: 0;
 	list-style: none;
-	display: block;
 }
 
-
+nav li {
+	display: inline-block;
+	margin: 1em;
+}
 
 nav a {
 	font-weight: 900;
@@ -263,8 +214,6 @@ nav a {
 	text-transform: uppercase;
 	color: white;
 	font-size: .8rem;
-	display: inline-block;
-	margin: 1em;
 }
 
 nav a:hover,
@@ -287,7 +236,7 @@ nav a:focus {
 =================== */
 
 .home-hero {
-	background-image: url(../img/hero-bg.jpeg);
+	background-image: url(hero-bg.jpeg);
 	background-size: cover;
 	background-position: center;
 	padding: 10em 0;
@@ -347,7 +296,7 @@ nav a:focus {
 	}
 
 	.home-about {
-		background-image: url(../img/who-we-are.jpg);
+		background-image: url(who-we-are.jpg);
 		background-repeat: no-repeat;
 		padding-bottom: 10em;
 	}
@@ -434,7 +383,6 @@ nav a:focus {
 	background-color: #00ff6c;
 	padding: 5em 0;
 }
-
 
 
 /* Footer
